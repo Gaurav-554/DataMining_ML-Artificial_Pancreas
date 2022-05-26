@@ -1,5 +1,6 @@
 Data Mining and Machine Learning: Artificial Pancreas Medical Control System
 
+
 Background:
 
 In this project we are considering the Artificial Pancreas medical control system, specifically the Medtronic 670G system. The Medtronic system consists of a continuous glucose monitor (CGM) and the Guardian Sensor, which is used to collect blood glucose measurements every 5 minutes. The sensor is single use and can be used continuously for 7 days after which it has to be replaced. The replacement procedures include a recalibration process that requires the user to obtain blood glucose measurements using a Contour NextLink 2.4 glucosemeter.
@@ -9,6 +10,7 @@ Note that this process also requires manual intervention. The Guardian Link Tran
 The Bolus Wizard is pre-configured with the correction factor, body weight, and average insulin sensitivity of the subject, and it calculates the bolus insulin to be delivered. The user can then program the MiniMed 670G infusion pump to deliver that amount. In addition to the bolus, the MiniMed 670G insulin pump can also provide a correction bolus. The correction bolus amount is provided only if the CGM reading is above a threshold (typically 120 mg/dL) and is a proportional amount with respect to the difference of the CGM reading and the threshold.
 
 The SmartGuard technology has two methods of suspending insulin delivery: a) Suspend on low, where the insulin delivery is stopped when the CGM reading is less than a certain threshold, or b) suspend on predicted low, where the insulin delivery is stopped when the CGM reading is predicted to be less than a certain threshold. Apart from these options, insulin delivery can also be suspended manually by the user or can be suspended when the insulin reservoir is running low.
+
 
 Data Description:
 
@@ -31,6 +33,7 @@ f.	Correction bolus
 g.	Correction factor
 h.	CGM calibration or insulin reservoir related alarms
 i.	AUTO mode exit events and unique codes representing reasons (Column Q)
+
 
 Objective:
 Overall objective has been divided into 3 successive parts as explained below.
