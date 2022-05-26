@@ -66,3 +66,6 @@ Train and Test a machine model to distinguish between mean and no-meal time seri
 <h3>Part 3</h3> 
 
 Apply clustering techniques based upon carbohydrate intake data and validate them.
+
+
+**Data Courtesy: School of Computing and Augmented Intelligence, Arizona State University**
