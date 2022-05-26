@@ -1,6 +1,6 @@
 Data Mining and Machine Learning: Artificial Pancreas Medical Control System
 
-
+<br>
 Background:
 
 In this project we are considering the Artificial Pancreas medical control system, specifically the Medtronic 670G system. The Medtronic system consists of a continuous glucose monitor (CGM) and the Guardian Sensor, which is used to collect blood glucose measurements every 5 minutes. The sensor is single use and can be used continuously for 7 days after which it has to be replaced. The replacement procedures include a recalibration process that requires the user to obtain blood glucose measurements using a Contour NextLink 2.4 glucosemeter.
