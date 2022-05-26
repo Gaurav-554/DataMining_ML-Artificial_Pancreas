@@ -1,7 +1,7 @@
-Data Mining and Machine Learning: Artificial Pancreas Medical Control System
+<h1 align="center">Data Mining and Machine Learning: <br> Artificial Pancreas Medical Control System</h1>
 
 <br>
-# Background:
+<h2>Background</h2>
 
 In this project we are considering the Artificial Pancreas medical control system, specifically the Medtronic 670G system. The Medtronic system consists of a continuous glucose monitor (CGM) and the Guardian Sensor, which is used to collect blood glucose measurements every 5 minutes. The sensor is single use and can be used continuously for 7 days after which it has to be replaced. The replacement procedures include a recalibration process that requires the user to obtain blood glucose measurements using a Contour NextLink 2.4 glucosemeter.
 
@@ -12,50 +12,57 @@ The Bolus Wizard is pre-configured with the correction factor, body weight, and 
 The SmartGuard technology has two methods of suspending insulin delivery: a) Suspend on low, where the insulin delivery is stopped when the CGM reading is less than a certain threshold, or b) suspend on predicted low, where the insulin delivery is stopped when the CGM reading is predicted to be less than a certain threshold. Apart from these options, insulin delivery can also be suspended manually by the user or can be suspended when the insulin reservoir is running low.
 
 <br>
-Data Description:
-<br>
+<h2>Data Description</h2>
+
 Two datasets have been used:
 1.	Continuous Glucose Sensor Data (CGMData_Patient#.csv)
 2.	Insulin Pump Data (InsulinData_Patient#.csv)
 
 The output of the CGM sensor consists of following columns:
-a.	Data-Time stamp (Columns B and C combined)
-b.	5 minute filtered CGM reading in mg/dL (Column AE)
-c.	ISIG value, which is the raw sensor output every 5 minutes
+-	Data-Time stamp (Columns B and C combined)
+-	5 minute filtered CGM reading in mg/dL (Column AE)
+-	ISIG value, which is the raw sensor output every 5 minutes
 
 The output of the pump has the following information:
-a.	Data-Time stamp
-b.	Basal setting
-c.	Micro bolus every 5 minutes
-d.	Meal intake amount in terms of grams of carbohydrate
-e.	Meal bolus
-f.	Correction bolus
-g.	Correction factor
-h.	CGM calibration or insulin reservoir related alarms
-i.	AUTO mode exit events and unique codes representing reasons (Column Q)
+-	Data-Time stamp
+-	Basal setting
+-	Micro bolus every 5 minutes
+-	Meal intake amount in terms of grams of carbohydrate
+-	Meal bolus
+-	Correction bolus
+-	Correction factor
+-	CGM calibration or insulin reservoir related alarms
+-	AUTO mode exit events and unique codes representing reasons (Column Q)
 
 <br>
-Objective:
+<h2>Objective</h2>
 Overall objective has been divided into 3 successive parts as explained below.
 
-Part 1
-Extract below mentioned performance metrics of an Artificial Pancreas System from sensor data.
+
+<h3>Part 1</h3>
+
+Extract below mentioned performance metrics of an Artificial Pancreas System from sensor data:
 1.	Percentage time in hyperglycemia (CGM > 180 mg/dL)
 2.	Percentage of time in hyperglycemia critical (CGM > 250 mg/dL)
 3.	Percentage time in range (CGM >= 70 mg/dL and CGM <= 180 mg/dL)
 4.	Percentage time in range secondary (CGM >= 70 mg/dL and CGM <= 150 mg/dL)
 5.	Percentage time in hypoglycemia level 1 (CGM < 70 mg/dL)
 6.	Percentage time in hypoglycemia level 2 (CGM < 54 mg/dL)
-Each metric has to be extracted in three different time intervals and two different modes as given below: 
-•	Daytime (6 AM to midnight) with Manual Mode
-•	Overnight (midnight to 6 AM) with Manual Mode
-•	Whole Day (12 AM to 12 AM) with Manual Mode
-•	Daytime (6 AM to midnight) with Auto Mode
-•	Overnight (midnight to 6 AM) with Auto Mode
-•	Whole Day (12 AM to 12 AM) with Auto Mode
 
-Part 2:
+Each metric has to be extracted in three different time intervals and two different modes as given below:
+-	Daytime (6 AM to midnight) with Manual Mode
+-	Overnight (midnight to 6 AM) with Manual Mode
+-	Whole Day (12 AM to 12 AM) with Manual Mode
+-	Daytime (6 AM to midnight) with Auto Mode
+-	Overnight (midnight to 6 AM) with Auto Mode
+-	Whole Day (12 AM to 12 AM) with Auto Mode
+
+
+<h3>Part 2</h3>
+
 Train and Test a machine model to distinguish between mean and no-meal time series data, and access accuracy of the trained model.
 
-Part 3: 
+
+<h3>Part 3</h3> 
+
 Apply clustering techniques based upon carbohydrate intake data and validate them.
