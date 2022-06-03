@@ -63,7 +63,7 @@ Each metric has to be extracted in three different time intervals and two differ
 Train and Test a machine model to distinguish between mean and no-meal time series data, and access accuracy of the trained model.
 
 
-<h3>Part 3</h3> 
+<h3>Part 3 (In Progress)</h3> 
 
 Apply clustering techniques based upon carbohydrate intake data and validate them.
 
